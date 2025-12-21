@@ -7,13 +7,12 @@ project(cudacpp LANGUAGES CXX CUDA)
 set(CMAKE_CUDA_STANDARD 20)
 
 add_executable(cudacpp main.cu
-        examples_cudac.h
-        util.h
-        examples_cudac_bugs.h
-        examples_cudac_stream.h
-        arrays.h
-        stream.h
-        examples_cudacpp.h
+        examples/cudac.h
+        examples/cudac_bugs.h
+        examples/cudac_stream.h
+        utils/arrays.h
+        utils/stream_adaptor.h
+        examples/cudacpp.h
 )
 
 # CPU-side flags (g++)

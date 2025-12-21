@@ -1,8 +1,8 @@
 #ifndef CUDACPP_EXAMPLES_CUDAC_STREAM_H
 #define CUDACPP_EXAMPLES_CUDAC_STREAM_H
 
-#include "arrays.h"
-#include "stream.h"
+#include "../utils/arrays.h"
+#include "../utils/stream_adaptor.h"
 
 #include <algorithm>
 #include <numeric>
@@ -29,7 +29,7 @@ struct StreamExamples
 inline void singleStream()
 {
     StreamExamples obj;
-    Stream stream{};
+    StreamAdaptor stream{};
     copy(obj.input, obj.gpu, stream);
     copy(obj.gpu, obj.output, stream);
     stream.sync();

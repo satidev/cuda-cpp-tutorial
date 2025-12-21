@@ -1,7 +1,7 @@
-#include "examples_cudac.h"
-#include "examples_cudac_bugs.h"
-#include "examples_cudac_stream.h"
-#include "examples_cudacpp.h"
+#include "examples/cudac.h"
+#include "examples/cudac_bugs.h"
+#include "examples/cudac_stream.h"
+#include "examples/cudacpp.h"
 #include <chrono>
 #include <iostream>
 

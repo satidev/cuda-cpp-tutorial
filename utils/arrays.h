@@ -1,7 +1,7 @@
 #ifndef CUDACPP_ARRAYS_H
 #define CUDACPP_ARRAYS_H
 
-#include "stream.h"
+#include "stream_adaptor.h"
 
 #include <optional>
 
@@ -112,7 +112,7 @@ template <typename ElemType> GpuArray<ElemType>::~GpuArray()
 }
 
 template <typename ElemType>
-void copy(const Array<ElemType> &src, Array<ElemType> &dst, Stream &stream,
+void copy(const Array<ElemType> &src, Array<ElemType> &dst, StreamAdaptor &stream,
           std::optional<size_t> num_elements_copy = std::nullopt, size_t num_elements_skip_src = 0,
           size_t num_elements_skip_dst = 0)
 {

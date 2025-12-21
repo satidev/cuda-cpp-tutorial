@@ -1,11 +1,11 @@
 #ifndef CUDACPP_EXAMPLES_H
 #define CUDACPP_EXAMPLES_H
 
-#include "util.h"
+#include "../utils/error_check.h"
 
+#include <iostream>
 #include <numeric>
 #include <vector>
-#include <iostream>
 
 namespace Examples::CUDAC
 {

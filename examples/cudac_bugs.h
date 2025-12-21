@@ -1,7 +1,7 @@
 #ifndef CUDACPP_EXAMPLES_CUDAC_BUGS_H
 #define CUDACPP_EXAMPLES_CUDAC_BUGS_H
 
-#include "util.h"
+#include "../utils/error_check.h"
 
 #include <vector>
 

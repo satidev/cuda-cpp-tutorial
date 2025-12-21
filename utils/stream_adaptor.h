@@ -1,19 +1,19 @@
 #ifndef CUDACPP_STREAM_H
 #define CUDACPP_STREAM_H
 
-#include "util.h"
+#include "error_check.h"
 
-class Stream
+class StreamAdaptor
 {
     cudaStream_t stream;
 
   public:
-    Stream()
+    StreamAdaptor()
     {
         checkError(cudaStreamCreate(&stream), "cudaStreamCreate");
     }
 
-    ~Stream()
+    ~StreamAdaptor()
     {
         checkError(cudaStreamDestroy(stream), "cudaStreamDestroy");
     }
