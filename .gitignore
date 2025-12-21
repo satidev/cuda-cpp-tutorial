@@ -39,3 +39,13 @@
 
 # debug information files
 *.dwo
+
+.idea
+vscode
+.vs
+build
+cmake-build-debug/
+cmake-build-release
+cmake-build-release-coverage
+cmake-build-debug-coverage
+external
