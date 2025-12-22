@@ -1,5 +1,4 @@
-#ifndef CUDACPP_STREAM_H
-#define CUDACPP_STREAM_H
+#pragma once
 
 #include "error_check.h"
 
@@ -7,11 +6,8 @@ class StreamAdaptor
 {
     cudaStream_t stream;
 
-  public:
-    StreamAdaptor()
-    {
-        checkError(cudaStreamCreate(&stream), "cudaStreamCreate");
-    }
+public:
+    StreamAdaptor() { checkError(cudaStreamCreate(&stream), "cudaStreamCreate"); }
 
     ~StreamAdaptor()
     {
@@ -23,10 +19,5 @@ class StreamAdaptor
         checkError(cudaStreamSynchronize(stream), "cudaStreamSynchronize");
     }
 
-    [[nodiscard]] cudaStream_t getStream() const
-    {
-        return stream;
-    }
+    [[nodiscard]] cudaStream_t getStream() const { return stream; }
 };
-
-#endif // CUDACPP_STREAM_H
